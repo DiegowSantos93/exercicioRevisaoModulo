@@ -1,11 +1,11 @@
 const livros = [];
 
-function inclusao(livro){
+function incluir(livro){
     livros.push(livro)
         console.log('Livro adicionado com sucesso!')
 }
 
-const listagem = () => {
+const listar = () => {
     if (livros.length === 0){
         console.log('Não existem livros cadastrados.');
     } else {
@@ -16,15 +16,25 @@ const listagem = () => {
     }
 }
 
-const remocao = (index) => {
+const remover = (index) => {
     if (livros.length >= 1){
         livros.splice(++index,1)
         console.log('Livro deletado com sucesso.')
     }
 }
 
+const atualizar = (livro,index) => {
+    if (index <= livros.lenght){
+        livros.splice(++index,1);
+    }
+    
+    livros[index] = livro;    
+    console.log('Livro atualizado com sucesso.')
+}
+
 module.exports = {
-    inclusao,
-    listagem,
-    remocao
+    incluir,
+    listar,
+    remover,
+    atualizar
 }

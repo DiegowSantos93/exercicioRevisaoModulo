@@ -31,9 +31,4 @@ const atualizar = (livro,index) => {
     console.log('Livro atualizado com sucesso.')
 }
 
-module.exports = {
-    incluir,
-    listar,
-    remover,
-    atualizar
-}
+module.exports = {incluir,listar,remover,atualizar}

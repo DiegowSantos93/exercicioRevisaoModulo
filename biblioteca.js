@@ -27,7 +27,6 @@ const atualizar = (livro,index) => {
     if (index <= livros.lenght){
         livros.splice(++index,1);
     }
-    
     livros[index] = livro;    
     console.log('Livro atualizado com sucesso.')
 }
